@@ -11,11 +11,12 @@
 
 class Solution {
     public int removeElement(int[] nums, int val) {
-        int k = 0, n = nums.length;
-        for (int i = 0; i < n; i++) {
+        int k = 0; // Initialize a counter for the number of elements not equal to val
+
+        for (int i = 0; i < nums.length; i++) {
             if (nums[i] != val) {
-                nums[k] = nums[i];
-                k++;
+                nums[k] = nums[i]; // Move the element to the front of the array and keep it
+                k++; // Increment the counter
             }
         }
         return k;
